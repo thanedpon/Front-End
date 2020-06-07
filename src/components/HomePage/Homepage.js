@@ -1,4 +1,6 @@
 import React from 'react';
+import Navmain from '../nav/Navmain';
+import './Homepage.css';
 
 
 export default class Homepage extends React.Component {
@@ -7,13 +9,19 @@ export default class Homepage extends React.Component {
         this.props.history.push('/');
     }
     render() {
-        return(
+        return (
             <div>
-                <h1>
-                    Homepage TEST
-                </h1>
-                <button onClick={this.onSubmit}> HI </button>
+                <Navmain />
+                <br />
+                <br />
+                <div className="header">
+                    <h1 className="text-header">
+                        HI
+                    </h1>
+
+                </div>
             </div>
+
         );
     }
 }
