@@ -8,6 +8,7 @@ import Login from './components/Login/Login';
 import './App.css';
 import Homepage from './components/HomePage/Homepage';
 import TodoList from './components/Todo/TodoList';
+import Todo from './components/TodoList/TList';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" component={Login} exact/>
           <Route path="/Homepage" component={Homepage} />
           <Route path="/Todo" component={TodoList} />
+          <Route path="/TodoList" component={Todo} />
         </Switch>
       </div>
     </BrowserRouter>
