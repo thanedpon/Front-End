@@ -1,10 +1,11 @@
 import React from 'react';
 import Navmain from '../nav/Navmain';
+import User from '../service/User';
 import './Homepage.css';
 
 
 export default class Homepage extends React.Component {
-
+      
     onSubmit = () => {
         this.props.history.push('/');
     }
@@ -14,10 +15,9 @@ export default class Homepage extends React.Component {
                 <Navmain />
                 <br />
                 <br />
-                <div className="header">
-                    <h1 className="text-header">
-                        HI
-                    </h1>
+                <h2> Random User</h2>
+                <div>
+                    <User />
 
                 </div>
             </div>

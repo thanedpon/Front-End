@@ -23,11 +23,12 @@ export default class Login extends React.Component {
 
     handlesubmit = (e) => {
         e.preventDefault(); // เพื่อไม่ไห้ browser reload หรือ refresh
-        const {history} = this.props;
-        this.setState({ error: false});
+        const { history } = this.props;
+        this.setState({ error: false });
 
         if (!(this.state.email === 'tha@hotmail.com' && this.state.password === '123456')) {
-            return this.setState({error: true});
+            return this.setState({ error: true, email: "", password: ""});
+
         }
 
         history.push("/Homepage");
@@ -63,7 +64,7 @@ export default class Login extends React.Component {
                             <label htmlFor="email">Email </label>
                             <input
                                 type="email"
-                                className={formErrors.email.length > 0 ? "error": null}
+                                className={formErrors.email.length > 0 ? "error" : null}
                                 placeholder="Email"
                                 // type="text"
                                 name="email"
@@ -90,7 +91,10 @@ export default class Login extends React.Component {
                             )}
                         </div>
                         <div className="Login">
-                            <button type="submit" >Login</button>
+                            <from id="LoginSubmit">
+                                <button type="submit" >Login</button>
+                            </from>
+
                         </div>
 
                     </form>

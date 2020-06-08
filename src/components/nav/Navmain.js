@@ -9,7 +9,8 @@ export default class Navmain extends React.Component {
             <div class="navbar">
                 <img src={logo} width="40" height="40" className="imagebar" />
                 <a href="/Homepage">Home</a>
-                <a href="">ToDO</a>
+                <a href="/Todo">Todo</a>
+                <a href="/Todo">Calculate</a>
                 <div class="topnav-right">
                     <a href="/">logout</a>
                 </div>
