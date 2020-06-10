@@ -1,7 +1,8 @@
 {
-    "experimentalComponentTesting": true,
-    "componentFolder": "src",
-    "testFiles": [
-        "**/*.spec.js"
-    ]
+  "experimentalComponentTesting": true,
+  "componentFolder": "src",
+  "testFiles": [
+    "**/*.spec.js"
+  ],
+  "projectId": "awxwgk"
 }
