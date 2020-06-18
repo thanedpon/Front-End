@@ -1,4 +1,6 @@
 import React from 'react';
+import axios from 'axios';
+
 
 export default class User extends React.Component {
     constructor(props) {
@@ -9,6 +11,13 @@ export default class User extends React.Component {
             users: [],
             error: null
         };
+    }
+
+    // fetchdata() {
+    //   return api.getDataAll().then(res => console.log(res.id));
+    // }
+    fetchdata() {
+      axios.get('http://localhost:3000/dev/show').then(res => console.log(res))
     }
 
     fetchUsers() {
@@ -25,6 +34,7 @@ export default class User extends React.Component {
 
     componentDidMount() {
         this.fetchUsers();
+        this.fetchdata();
     }
 
     render() {
